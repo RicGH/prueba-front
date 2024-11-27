@@ -2,7 +2,8 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import PDFDownload from "./PDFDownloads";
 import * as pdfService from "../service/pdfService";
-import App from "../App";
+import axios from 'axios';
+jest.mock('axios');
 
 // Mockear la función del servicio
 jest.mock("../service/pdfService", () => ({
